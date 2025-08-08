@@ -16,7 +16,7 @@ COPY tmp/sources.list /tmp/sources.list.tmp
 RUN ([ -s /tmp/sources.list.tmp ] && mv -f /tmp/sources.list.tmp /etc/apt/sources.list && cat /etc/apt/sources.list) || (cat /etc/apt/sources.list)
 
 # Add temporary CERTs needed during build (it is safe to comment the following 1 line out):
-COPY tmp/build-ca-cert.crt /usr/local/share/ca-certificates/build-ca-cert.crt
+# COPY tmp/build-ca-cert.crt /usr/local/share/ca-certificates/build-ca-cert.crt
 
 # Install tools, create data dir, add user and set rights
 RUN set -ex && \
@@ -53,8 +53,8 @@ COPY ${SRC_PATH}icons/ /data/iconify-api/icons/
 # Build API
 RUN npm run build
 
-#### Stage RELEASE #####################################################################################################
-FROM iconify-api-install AS RELEASE
+#### Stage release #####################################################################################################
+FROM iconify-api-install AS release
 ARG BUILD_DATE
 ARG BUILD_VERSION
 ARG BUILD_REF
