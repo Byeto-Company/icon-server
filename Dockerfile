@@ -79,7 +79,7 @@ RUN rm -rf /tmp/*
 
 # Env variables
 ENV ICONIFY_API_VERSION=$ICONIFY_API_VERSION
-
+ENV ICONIFY_SOURCE=none
 # Expose the listening port of Iconify API
 EXPOSE 3000
 
