@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: greenstorm911/db-backup-with-docker
+  IMAGE_NAME: greenstorm911/icon-server
 
 jobs:
   build-and-push:
