@@ -28,8 +28,8 @@ RUN set -ex && \
         nano \
 		git && \
     mkdir -p /data/iconify-api && \
-    apt-get clean && \
-    rm -rf /tmp/* && 
+    apt-get clean && 
+    # rm -rf /tmp/* && 
     # Restore the original sources.list
     # ([ -s /etc/apt/sources.list.original ] && mv /etc/apt/sources.list.original /etc/apt/sources.list)
     # Remove the temporary build CA cert
