@@ -31,9 +31,9 @@ RUN set -ex && \
     apt-get clean && \
     rm -rf /tmp/* && \
     # Restore the original sources.list
-    ([ -s /etc/apt/sources.list.original ] && mv /etc/apt/sources.list.original /etc/apt/sources.list) && \
+    ([ -s /etc/apt/sources.list.original ] && mv /etc/apt/sources.list.original /etc/apt/sources.list)
     # Remove the temporary build CA cert
-    rm -f /usr/local/share/ca-certificates/build-ca-cert.crt
+    # rm -f /usr/local/share/ca-certificates/build-ca-cert.crt
 
 # Set work directory
 WORKDIR /data/iconify-api
