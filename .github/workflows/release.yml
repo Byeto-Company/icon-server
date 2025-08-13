@@ -62,8 +62,7 @@ jobs:
         tag_name: ${{ github.ref_name }}
         name: Release ${{ github.ref_name }}
         body: |
-          ## veriosn v1.0.0
-
+          fix port exposeing
 
         draft: false
         prerelease: ${{ contains(github.ref_name, 'alpha') || contains(github.ref_name, 'beta') || contains(github.ref_name, 'rc') }}
